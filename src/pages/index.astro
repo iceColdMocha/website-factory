@@ -1,11 +1,110 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+/* IMPORT THE FOUNDATION (Corrected Path) */
+import '../styles/globals.css';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+/* IMPORT THE COMPONENTS */
+import UniversalHero from '../components/UniversalHero.svelte';
+import UniversalFeatureGrid from '../components/UniversalFeatureGrid.svelte';
+
+/* IMPORT THE THEMES */
+import '../styles/themes/startup.css';
+import '../styles/themes/corporate.css';
+import '../styles/themes/brutalist.css';
+
+/* DUMMY DATA FOR GRIDS */
+const features = [
+  { title: "Modular", text: "Built on a component architecture that scales.", icon: "📦" },
+  { title: "Fast", text: "Zero JavaScript by default. Blazing speeds.", icon: "⚡" },
+  { title: "Themed", text: "Physics-based design tokens for instant branding.", icon: "🎨" }
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Stress Test</title>
+    <style>
+      .spacer { 
+        height: 40px; 
+        background: #111; 
+        color: #fff; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        font-size: 12px; 
+        font-weight: bold; 
+        letter-spacing: 1px; 
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="spacer">Test 1: Brutalist (Right Aligned)</div>
+    <div class="theme-brutalist">
+      <UniversalHero 
+        client:load
+        videoControls={true}
+        title="Make<br>Noise"
+        subtitle="WE BREAK THINGS SO YOU DON'T HAVE TO."
+        ctaText="Enter Void"
+        layout="center-overlay"
+      >
+        <video slot="media" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover;">
+      <source src="/assets/noise.mp4" type="video/mp4">
+    </video>
+      </UniversalHero>
+      <UniversalFeatureGrid 
+        title="HARD TRUTHS" 
+        subtitle="NO FLUFF. JUST RAW DATA." 
+        items={features} 
+      />
+    </div>
+
+    <div class="spacer">Test 2: Corporate (Split Left)</div>
+    <div class="theme-corporate">
+      <UniversalHero 
+        title="Strategic Vision."
+        subtitle="Global consulting for the modern enterprise."
+        ctaText="Our Methodology"
+        layout="split-right"
+      >
+        <img slot="media" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070" alt="Building" />
+      </UniversalHero>
+      <UniversalFeatureGrid 
+        title="Our Capabilities" 
+        subtitle="Comprehensive solutions for complex problems." 
+        items={features} 
+      />
+    </div>
+
+    <div class="spacer">Test 3: Startup (Center Overlay)</div>
+    <div class="theme-startup">
+      <UniversalHero 
+        title="Flow State"
+        subtitle="The productivity app that adapts to your brain waves."
+        ctaText="Start Free Trial"
+        layout="center-overlay"
+      >
+         <img slot="media" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=2070" alt="Working" style="width:100%; height:100%; object-fit:cover;" />
+      </UniversalHero>
+      <UniversalFeatureGrid 
+        title="Why Choose Us?" 
+        subtitle="We make it easy to build your dream." 
+        items={features} 
+      />
+    </div>
+
+     <div class="spacer">Test 4: Minimal (No Media)</div>
+     <div class="theme-corporate" style="--hero-bg-color: #fff; --hero-text-color: #000; --hero-height: 40vh; --hero-align: center; --hero-justify: center;">
+       <UniversalHero 
+         title="Simply Text."
+         subtitle="Sometimes you don't need a background image to say what needs to be said."
+         ctaText="Read More"
+         layout="minimal"
+       />
+     </div>
+
+  </body>
+</html>

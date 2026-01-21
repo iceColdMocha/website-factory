@@ -1,0 +1,37 @@
+/* src/styles/global.css */
+
+/* 1. The Box Model Reset (Crucial) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Base Page Physics */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    /* The safety lock for horizontal scrolling */
+    -webkit-font-smoothing: antialiased;
+    /* Makes text look sharper on Mac */
+}
+
+/* 3. Media Safety Nets */
+img,
+video,
+iframe,
+svg {
+    display: block;
+    /* Removes weird gaps below images */
+    max-width: 100%;
+    /* Prevents images from breaking layouts */
+}
+
+/* 4. Default Typography Fallback */
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+}

@@ -1,0 +1,49 @@
+.theme-brutalist {
+    /* LAYOUT */
+    --hero-height: 95vh;
+    --hero-padding: 2rem;
+    /* Give it a tiny bit of breathing room */
+
+    /* Push the invisible box to the right */
+    --hero-align: flex-end;
+
+    /* Center it vertically */
+    --hero-justify: center;
+
+    /* Align the actual letters to the right */
+    --hero-text-align: right;
+
+    /* TYPOGRAPHY */
+    --hero-title-size: 13vw;
+    /* Slightly smaller to fit "MAKE NOISE" nicely */
+    --hero-line-height: 0.85;
+    --hero-title-weight: 900;
+    --hero-title-case: uppercase;
+    --hero-font-family: 'Impact', 'Arial Black', sans-serif;
+    --hero-text-width: 100%;
+
+    /* COLORS */
+    --hero-bg-color: #000;
+    --hero-text-color: #e2e8f0;
+    /* Off-white */
+
+    /* BUTTONS */
+    --btn-bg: #e11d48;
+    /* Hot Pink/Red */
+    --btn-text: #fff;
+    --btn-radius: 0px;
+    /* Sharp */
+    --btn-border: 4px solid white;
+    --btn-padding: 1.5rem 3rem;
+}
+/* --- CARD PHYSICS (Appended) --- */
+.theme-brutalist {
+  --grid-gap: 0px; /* Grids touch each other */
+  --card-padding: 3rem;
+  --card-bg: transparent;
+  --card-border: 2px solid white; /* Wireframe look */
+  --card-radius: 0px;
+  --card-shadow: 8px 8px 0px 0px #e11d48; /* Hard colored drop shadow */
+  --icon-size: 3rem;
+  --section-bg: #111; /* Dark section background */
+}

@@ -1,0 +1,32 @@
+.theme-startup {
+  /* Layout Physics */
+  --hero-height: 80vh;
+  --hero-padding: 4rem;
+  --hero-align: center;
+  --hero-justify: center;
+  
+  /* Typography Physics */
+  --hero-title-size: clamp(3rem, 6vw, 5rem);
+  --hero-title-weight: 800;
+  --hero-title-case: none;
+  --hero-font-family: 'Helvetica Neue', sans-serif;
+  
+  /* Color/Shape Physics */
+  --hero-bg-color: #eff6ff;
+  --hero-text-color: #1e3a8a;
+  --btn-radius: 9999px;
+  --btn-bg: #2563eb;
+  --btn-text: white;
+}
+
+/* --- CARD PHYSICS (Appended) --- */
+.theme-startup {
+  --grid-gap: 2rem;
+  --card-padding: 2rem;
+  --card-bg: #ffffff;
+  --card-border: 1px solid rgba(0,0,0,0.05);
+  --card-radius: 16px; /* Friendly curves */
+  --card-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); /* Soft float */
+  --icon-size: 2.5rem;
+  --section-bg: #f8fafc;
+}

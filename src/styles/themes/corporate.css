@@ -1,0 +1,32 @@
+.theme-corporate {
+  /* Layout Physics */
+  --hero-height: 60vh;
+  --hero-padding: 6rem;
+  --hero-align: center;
+  --hero-justify: flex-start;
+  
+  /* Typography Physics */
+  --hero-title-size: 3.5rem;
+  --hero-title-weight: 400;
+  --hero-title-case: uppercase;
+  --hero-font-family: 'Georgia', serif;
+  
+  /* Color/Shape Physics */
+  --hero-bg-color: #0f172a;
+  --hero-text-color: #f8fafc;
+  --btn-radius: 2px;
+  --btn-bg: white;
+  --btn-text: #0f172a;
+}
+
+/* --- CARD PHYSICS (Appended) --- */
+.theme-corporate {
+  --grid-gap: 1px; /* The "Border Grid" trick */
+  --card-padding: 3rem;
+  --card-bg: #ffffff;
+  --card-border: none;
+  --card-radius: 0px;
+  --card-shadow: none;
+  --icon-size: 2rem;
+  --section-bg: #e2e8f0; /* The gap becomes the border color */
+}
